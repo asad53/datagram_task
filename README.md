@@ -14,13 +14,13 @@ Access to a Redshift database
 # Step 1: Clone the Repository
 
 Clone the repository containing the Python script from GitHub:
-`git clone <repository_url>`
+```git clone https://github.com/asad53/datagram_task.git```
 
 # Step 2: Install Dependencies
 
 Navigate to the project directory and install the required Python dependencies using pip:
-`cd <project_directory>`
-`pip install psycopg2-binary curl_cffi beautifulsoup4`
+```cd <project_directory>```
+```pip install psycopg2-binary curl_cffi beautifulsoup4```
 
 # Step 3: Configure Database Credentials
 
@@ -38,7 +38,7 @@ Replace the placeholder values (*****************, *******, *********, etc.) wit
 # Step 4: Run the Script
 
 Execute the Python script to scrape data from the website and insert it into the Redshift database:
-`python script.py`
+```python script.py```
 
 
 # The script will perform the following actions:
