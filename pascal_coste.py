@@ -70,15 +70,9 @@ def json_insertion(listing_final):
 
 
 # for database insertion & table creation
-def database_insertion():
+def database_insertion(redshift_host, redshift_user_name, redshift_password, redshift_database_name,schema_name):
     # Connection details for Redshift
-    # You can put your database credentials here
-    redshift_host = '*****************'
-    redshift_database_name = '*******'
-    redshift_user_name = 'asad_ikram'
-    redshift_password = '********'
     table_name = 'pascal_coste_data'
-    schema_name = 'user_asad_ikram'
     primary_key_value = 'product_url'
 
     # Establish a connection to the Redshift database
@@ -180,9 +174,16 @@ try:
 except Exception as e:
     print(f"Got error while saving to json! Error: {e}")
     exit()
+
 # saves data to database from json file
+# You can put your database credentials here
+redshift_host = '*****************'
+redshift_database_name = '*******'
+redshift_user_name = '*******'
+redshift_password = '********'
+schema_name = '*********'
 try:
-    database_insertion()
+    database_insertion(redshift_host, redshift_user_name, redshift_password, redshift_database_name,schema_name)
 except Exception as e:
     print(f"Got error while database insertion! Error: {e}")
     exit()
